@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enrollment</title>
+</head>
+{% load crispy_forms_tags %}
+<body>
+<!--Register-->
+    <div class="container py-5">
+        <h1>Register new enrollment</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ register_form|crispy }}
+            <button class="btn btn-primary" type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>
